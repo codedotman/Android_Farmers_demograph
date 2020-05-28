@@ -1,0 +1,2 @@
+rootProject.name='Farmers Demograph'
+include ':app'
