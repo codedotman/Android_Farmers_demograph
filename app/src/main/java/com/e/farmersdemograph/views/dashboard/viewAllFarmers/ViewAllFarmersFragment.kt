@@ -1,4 +1,4 @@
-package com.e.farmersdemograph.views.dashboard
+package com.e.farmersdemograph.views.dashboard.viewAllFarmers
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -13,30 +13,29 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.e.farmersdata.data.models.FarmersData
 
 import com.e.farmersdemograph.R
+import com.e.farmersdemograph.views.dashboard.DashboardAdapter
 import com.e.farmersdemograph.views.viewFarmers.ViewFarmerViewModel
 import com.e.farmersdemograph.views.viewFarmers.ViewFarmersDetailsFragment
-import com.e.farmersdemograph.views.viewFarmers.ViewFarmersDetailsFragment.Companion.FARMERS_NAME
 import dagger.android.support.DaggerFragment
-import kotlinx.android.synthetic.main.fragment_dashboard.*
+import kotlinx.android.synthetic.main.fragment_view_all_farmers.*
 import javax.inject.Inject
 
 /**
  * A simple [Fragment] subclass.
  */
-class DashboardFragment : DaggerFragment(), DashboardAdapter.ItemClickListener {
-    private lateinit var viewModel: ViewFarmerViewModel
+class ViewAllFarmersFragment : DaggerFragment(), DashboardAdapter.ItemClickListener {
 
+    private lateinit var viewModel: ViewFarmerViewModel
     @Inject
     internal lateinit var factory: ViewModelProvider.Factory
     private lateinit var mAdapter: DashboardAdapter
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dashboard, container, false)
+        return inflater.inflate(R.layout.fragment_view_all_farmers, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -44,37 +43,22 @@ class DashboardFragment : DaggerFragment(), DashboardAdapter.ItemClickListener {
         viewModel = ViewModelProvider(this, factory)[ViewFarmerViewModel::class.java]
 
         mAdapter = DashboardAdapter(this)
-        recycler_view.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-        recycler_view.adapter = mAdapter
+        view_farmers_recycler_view.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        view_farmers_recycler_view.adapter = mAdapter
 
         viewModel.getData().observe(viewLifecycleOwner, Observer { data ->
-            farmers_total_number.text = data.size.toString()
             mAdapter.setItems(data)
         })
 
-        val navController =
-            Navigation.findNavController(requireActivity(), R.id.my_nav_host_fragment)
-        add_farmer.setOnClickListener {
-            navController.navigate(R.id.action_dashboardFragment_to_addFarmerFragment)
-        }
-
-        btn_view_map.setOnClickListener {
-            navController.navigate(R.id.action_dashboardFragment_to_viewAllFarmersFragment)
-
-
-        }
-
-
-
-
     }
+
+
 
     override fun onListItemClick(farmersData: FarmersData) {
 
         val bundle = bundleOf()
         bundle.apply {
-            putString(FARMERS_NAME, farmersData.name)
+            putString(ViewFarmersDetailsFragment.FARMERS_NAME, farmersData.name)
             putString(ViewFarmersDetailsFragment.FARMERS_AGE, farmersData.age)
             putString(ViewFarmersDetailsFragment.FARMERS_IMG, farmersData.image)
             putString(ViewFarmersDetailsFragment.FARMERS_PHONE, farmersData.phone)
@@ -93,13 +77,16 @@ class DashboardFragment : DaggerFragment(), DashboardAdapter.ItemClickListener {
             val navController =
                 Navigation.findNavController(requireActivity(), R.id.my_nav_host_fragment)
             navController.navigate(
-                R.id.action_dashboardFragment_to_viewFarmersDetailsFragment,
+                R.id.action_viewAllFarmersFragment_to_viewFarmersDetailsFragment,
                 bundle
             )
 
         }
 
 
+        }
 
     }
-}
+
+
+
