@@ -51,6 +51,17 @@ class DashboardFragment : DaggerFragment(), DashboardAdapter.ItemClickListener {
             mAdapter.setItems(data)
         })
 
+        val navController =
+            Navigation.findNavController(requireActivity(), R.id.my_nav_host_fragment)
+        add_farmer.setOnClickListener {
+            navController.navigate(R.id.action_dashboardFragment_to_addFarmerFragment)
+        }
+
+        btn_view_map.setOnClickListener {
+
+        }
+
+
 
 
     }

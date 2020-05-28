@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/frameLayout2"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/bubbles_bg"
+tools:context=".views.addFarmer.AddFarmerLocationFragment">
+
+
+<TextView
+    android:id="@+id/textView2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="24dp"
+    android:text="Farm Location"
+    android:textColor="@android:color/black"
+    android:textSize="25sp"
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<Button
+    android:id="@+id/buttonPoint1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="21dp"
+    android:layout_marginLeft="21dp"
+    android:layout_marginTop="100dp"
+    android:text="Compute Point 1 Location"
+    android:padding="10dp"
+    android:textColor="@android:color/white"
+    android:background="@color/colorPrimary"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<ImageView
+    android:id="@+id/imagePoint1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="117dp"
+    android:layout_marginEnd="16dp"
+    android:visibility="gone"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="118dp"
+    android:tint="@android:color/holo_green_dark"
+    android:src="@drawable/check_red"
+    app:layout_constraintBottom_toTopOf="@+id/buttonPoint3"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+<Button
+    android:id="@+id/buttonPoint2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="38dp"
+    android:text="Compute Point 2 Location"
+    android:padding="10dp"
+    android:tint="@android:color/holo_green_dark"
+    android:textColor="@android:color/white"
+    android:background="@color/colorPrimary"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/buttonPoint1" />
+
+<ImageView
+    android:id="@+id/imagePoint2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="56dp"
+    android:visibility="gone"
+    android:layout_marginEnd="16dp"
+    android:layout_marginRight="16dp"
+    android:src="@drawable/check_red"
+    android:tint="@android:color/holo_green_dark"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/imagePoint1" />
+
+<Button
+    android:id="@+id/buttonPoint3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="21dp"
+    android:layout_marginLeft="21dp"
+    android:layout_marginTop="38dp"
+    android:text="Compute Point 3 Location"
+    android:padding="10dp"
+    android:textColor="@android:color/white"
+    android:background="@color/colorPrimary"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/buttonPoint2" />
+
+<ImageView
+    android:id="@+id/imagePoint3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="62dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginRight="16dp"
+    android:visibility="gone"
+    android:tint="@android:color/holo_green_dark"
+    android:src="@drawable/check_red"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/imagePoint2" />
+
+<Button
+    android:id="@+id/buttonPoint4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="21dp"
+    android:layout_marginLeft="21dp"
+    android:layout_marginTop="38dp"
+    android:text="Compute Point 4 Location"
+    android:padding="10dp"
+    android:textColor="@android:color/white"
+    android:background="@color/colorPrimary"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/buttonPoint3" />
+
+<ImageView
+    android:id="@+id/imagePoint4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="60dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginRight="16dp"
+    android:src="@drawable/check_red"
+    android:visibility="gone"
+    android:tint="@android:color/holo_green_dark"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/imagePoint3" />
+
+<Button
+    android:id="@+id/completeBtn"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="80dp"
+    android:text="Finish"
+    android:layout_marginStart="58dp"
+    android:layout_marginEnd="58dp"
+    android:textColor="@android:color/white"
+    android:background="@color/colorPrimary"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/buttonPoint4" />
+</androidx.constraintlayout.widget.ConstraintLayout>

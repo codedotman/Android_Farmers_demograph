@@ -30,6 +30,29 @@
         android:name="com.e.farmersdemograph.views.dashboard.DashboardFragment"
         android:label="fragment_dashboard"
         tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_addFarmerFragment"
+            app:destination="@id/addFarmerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addFarmerFragment"
+        android:name="com.e.farmersdemograph.views.addFarmer.AddFarmerFragment"
+        android:label="fragment_add_faarmer"
+        tools:layout="@layout/fragment_add_farmer" >
+        <action
+            android:id="@+id/action_addFarmerFragment_to_addFarmerLocationFragment"
+            app:destination="@id/addFarmerLocationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addFarmerLocationFragment"
+        android:name="com.e.farmersdemograph.views.addFarmer.AddFarmerLocationFragment"
+        android:label="fragment_add_faarmer_location"
+        tools:layout="@layout/fragment_add_farmer_location" >
+        <action
+            android:id="@+id/action_addFarmerLocationFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
     </fragment>
 
 </navigation>
