@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Farmers Demograph</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--    ON BOARDING-->
+    <string name="on_board_header_1">Capture</string>
+    <string name="on_board_header_2">Analysis &amp; Statistics</string>
+    <string name="on_board_header_3">Data transfer</string>
+    <string name="on_board_header_4">A.I farming</string>
+    <string name="on_board_footer_1">Farmers real time capture</string>
+    <string name="on_board_footer_2">Detailed farmers demography\n and analysis</string>
+    <string name="on_board_footer_3">Enjoy record keeping using\n digital cloud storage</string>
+    <string name="on_board_footer_4">Access to artificial intelligence\n farming</string>
 </resources>

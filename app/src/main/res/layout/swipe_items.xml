@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:id="@+id/skip"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_gravity="end"/>
+
+
+    <TextView
+        android:id="@+id/name_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        tools:text="@tools:sample/first_names" />
+
+    <ImageView
+        android:id="@+id/item_img"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:padding="40dp"
+        tools:ignore="ContentDescription"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/tv_footer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        tools:text="@tools:sample/lorem" />
+
+</LinearLayout>
