@@ -16,4 +16,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="SubHeadTextStyle" parent="android:Widget.TextView">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@android:color/black</item>
+
+    </style>
+
 </resources>
