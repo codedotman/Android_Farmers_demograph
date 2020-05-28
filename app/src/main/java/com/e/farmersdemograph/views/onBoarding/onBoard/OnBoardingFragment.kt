@@ -16,7 +16,6 @@ import androidx.viewpager2.widget.ViewPager2
 import com.e.farmersdata.data.models.OnBoardSlide
 
 import com.e.farmersdemograph.R
-import dagger.android.support.DaggerFragment
 import kotlinx.android.synthetic.main.fragment_on_boarding.*
 
 /**
