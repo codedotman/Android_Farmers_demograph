@@ -13,4 +13,17 @@
     <string name="on_board_footer_2">Detailed farmers demography\n and analysis</string>
     <string name="on_board_footer_3">Enjoy record keeping using\n digital cloud storage</string>
     <string name="on_board_footer_4">Access to artificial intelligence\n farming</string>
+
+    <string name="label_btn_starter">Discover the platform</string>
+    <string name="label_login_footer">You have an account ? Log-in</string>
+    <string name="label_header_sign_in">Sign-in</string>
+    <string name="label_btn_sign_in">Sign-in</string>
+    <string name="label_register_footer">Don\'t have an account ? Register</string>
+    <string name="label_header_sign_up">Sign-up</string>
+    <string name="label_hint_first_name">First name</string>
+    <string name="label_hint_last_name">Last name</string>
+    <string name="label_hint_email">Email</string>
+    <string name="label_hint_password">password</string>
+    <string name="label_btn_sign_up">Sign-up</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.get
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.viewpager2.widget.ViewPager2
 import com.e.farmersdata.data.models.OnBoardSlide
 
@@ -133,7 +134,8 @@ class OnBoardingFragment : Fragment(), OnBoardAdapter.ListItemClickListener {
     }
 
     override fun onListItemClick() {
-        TODO("Not yet implemented")
-    }
+        val navController =
+            Navigation.findNavController(requireActivity(), R.id.my_nav_host_fragment)
+        navController.navigate(R.id.action_onboardingFragment_to_loginFragment)    }
 
 }

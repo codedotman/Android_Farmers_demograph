@@ -10,6 +10,16 @@
         android:name="com.e.farmersdemograph.views.onBoarding.onBoard.OnBoardingFragment"
         android:label="fragment_onboarding"
         tools:layout="@layout/fragment_on_boarding" >
+        <action
+            android:id="@+id/action_onboardingFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.e.farmersdemograph.views.onBoarding.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
     </fragment>
 
 </navigation>
