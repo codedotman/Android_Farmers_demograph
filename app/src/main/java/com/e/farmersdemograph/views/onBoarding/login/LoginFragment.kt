@@ -33,6 +33,9 @@ class LoginFragment : Fragment() {
 
         viewModel.getData.observe(viewLifecycleOwner, Observer {response->
             if (email==response.email && password==response.password){
+                val navController =
+                    Navigation.findNavController(requireActivity(), R.id.my_nav_host_fragment)
+                navController.navigate(R.id.action_loginFragment_to_dashboardFragment)
 
             }
             else{
