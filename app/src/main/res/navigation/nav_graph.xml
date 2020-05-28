@@ -79,6 +79,17 @@
         android:label="fragment_view_farmers_details"
         tools:layout="@layout/fragment_view_farmers_details" >
 
+        <action
+            android:id="@+id/action_viewFarmersDetailsFragment_to_viewMapsFragment"
+            app:destination="@id/viewMapsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewMapsFragment"
+        android:name="com.e.farmersdemograph.views.viewFarmers.ViewFarmersDetailsFragment"
+        android:label="fragment_view_map"
+        tools:layout="@layout/fragment_map_view" >
+
     </fragment>
 
 </navigation>

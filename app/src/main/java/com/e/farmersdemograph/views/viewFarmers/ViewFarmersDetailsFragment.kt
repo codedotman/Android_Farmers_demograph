@@ -8,15 +8,27 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.navigation.Navigation
 
 import com.e.farmersdemograph.R
+import com.e.farmersdemograph.views.maps.MapViewFragment
 import kotlinx.android.synthetic.main.fragment_view_farmers_details.*
 
 /**
  * A simple [Fragment] subclass.
  */
 class ViewFarmersDetailsFragment : Fragment() {
+
+    var lat1: Double = 0.0
+    var lat2: Double = 0.0
+    var lat3: Double = 0.0
+    var lat4: Double = 0.0
+    var long1: Double = 0.0
+    var long2: Double = 0.0
+    var long3: Double = 0.0
+    var long4: Double = 0.0
+
 
 
     override fun onCreateView(
@@ -32,6 +44,15 @@ class ViewFarmersDetailsFragment : Fragment() {
 
 
         arguments?.let {
+            lat1 = it.getString(FARM_LAT1)?.toDouble() ?: 0.00
+            lat2 = it.getString(FARM_LAT2)?.toDouble() ?: 0.00
+            lat3 = it.getString(FARM_LAT3)?.toDouble() ?: 0.00
+            lat4 = it.getString(FARM_LAT4)?.toDouble() ?: 0.00
+            long1 = it.getString(FARM_LON1)?.toDouble() ?: 0.00
+            long2= it.getString(FARM_LON2)?.toDouble() ?: 0.00
+            long3 = it.getString(FARM_LON3)?.toDouble() ?: 0.00
+            long4 = it.getString(FARM_LON4)?.toDouble() ?: 0.00
+
             f_name.text = it.getString(FARMERS_NAME).toString()
             f_age.text = it.getString(FARMERS_AGE).toString()
             f_location.text = it.getString(FARM_LOCATION).toString()
@@ -41,10 +62,25 @@ class ViewFarmersDetailsFragment : Fragment() {
 
 
         }
+        val bundle = bundleOf()
+        bundle.apply {
+            putString(MapViewFragment.FARM_LAT1, lat1.toString())
+            putString(MapViewFragment.FARM_LAT2, lat2.toString())
+            putString(MapViewFragment.FARM_LAT3, lat3.toString())
+            putString(MapViewFragment.FARM_LAT4, lat4.toString())
+            putString(MapViewFragment.FARM_LON1, long1.toString())
+            putString(MapViewFragment.FARM_LON2, long2.toString())
+            putString(MapViewFragment.FARM_LON3, long3.toString())
+            putString(MapViewFragment.FARM_LON4, long4.toString())
 
-        button.setOnClickListener {  }
 
 
+        }
+
+        button.setOnClickListener {
+            val navController = Navigation.findNavController(requireActivity(), R.id.my_nav_host_fragment)
+            navController.navigate(R.id.action_viewFarmersDetailsFragment_to_viewMapsFragment, bundle)
+        }
 
     }
 
