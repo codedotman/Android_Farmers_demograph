@@ -76,7 +76,6 @@ class AddFarmerLocationFragment : DaggerFragment(){
                 .addOnSuccessListener { location: Location ->
                     latlng1 = LatLng(location.latitude, location.longitude)
                     imagePoint1.visibility = View.VISIBLE
-                    Log.d("location1", latlng1.toString())
 
                 }
         }
@@ -88,7 +87,6 @@ class AddFarmerLocationFragment : DaggerFragment(){
                     latlng2 = LatLng(location.latitude, location.longitude)
                     imagePoint2.visibility = View.VISIBLE
 
-                    Log.d("location2", latlng2.toString())
                 }
         }
         buttonPoint3.setOnClickListener {
@@ -98,7 +96,6 @@ class AddFarmerLocationFragment : DaggerFragment(){
                 .addOnSuccessListener { location: Location ->
                     latlng3 = LatLng(location.latitude, location.longitude)
                     imagePoint3.visibility = View.VISIBLE
-                    Log.d("location3", latlng3.toString())
                 }
         }
         buttonPoint4.setOnClickListener {
@@ -109,7 +106,6 @@ class AddFarmerLocationFragment : DaggerFragment(){
                     latlng4 = LatLng(location.latitude, location.longitude)
                     imagePoint4.visibility = View.VISIBLE
 
-                    Log.d("location4", latlng4.toString())
                 }
         }
         completeBtn.setOnClickListener {

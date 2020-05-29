@@ -80,13 +80,13 @@
         tools:layout="@layout/fragment_view_farmers_details" >
 
         <action
-            android:id="@+id/action_viewFarmersDetailsFragment_to_viewMapsFragment"
+            android:id="@+id/action_viewFarmersDetailsFragment_to_viewMapsFragment2"
             app:destination="@id/viewMapsFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/viewMapsFragment"
-        android:name="com.e.farmersdemograph.views.viewFarmers.ViewFarmersDetailsFragment"
+        android:name="com.e.farmersdemograph.views.maps.MapViewFragment"
         android:label="fragment_view_map"
         tools:layout="@layout/fragment_map_view" >
 

@@ -62,6 +62,9 @@ class ViewFarmersDetailsFragment : Fragment() {
 
 
         }
+
+
+
         val bundle = bundleOf()
         bundle.apply {
             putString(MapViewFragment.FARM_LAT1, lat1.toString())
@@ -77,11 +80,10 @@ class ViewFarmersDetailsFragment : Fragment() {
 
         }
 
-        button.setOnClickListener {
-            val navController = Navigation.findNavController(requireActivity(), R.id.my_nav_host_fragment)
-            navController.navigate(R.id.action_viewFarmersDetailsFragment_to_viewMapsFragment, bundle)
-        }
-
+        button.setOnClickListener {  val navController =
+            Navigation.findNavController(requireActivity(), R.id.my_nav_host_fragment)
+            navController.navigate(
+                R.id.action_viewFarmersDetailsFragment_to_viewMapsFragment2, bundle) }
     }
 
     fun String.convertToBitMap(): Bitmap? {

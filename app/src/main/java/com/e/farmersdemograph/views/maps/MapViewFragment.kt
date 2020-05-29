@@ -2,6 +2,7 @@ package com.e.farmersdemograph.views.maps
 
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -55,17 +56,19 @@ class MapViewFragment : Fragment(), OnMapReadyCallback {
 
         arguments?.let {
 
-            lat1 = it.getString(FARM_LAT1)?.toDouble() ?: 0.00
-            lat2 = it.getString(FARM_LAT2)?.toDouble() ?: 0.00
-            lat3 = it.getString(FARM_LAT3)?.toDouble() ?: 0.00
-            lat4 = it.getString(FARM_LAT4)?.toDouble() ?: 0.00
-            long1 = it.getString(FARM_LON1)?.toDouble() ?: 0.00
-            long2= it.getString(FARM_LON2)?.toDouble() ?: 0.00
-            long3 = it.getString(FARM_LON3)?.toDouble() ?: 0.00
-            long4 = it.getString(FARM_LON4)?.toDouble() ?: 0.00
+
+            lat1 = it.getString(FARM_LAT1)!!.toDouble()
+            lat2 = it.getString(FARM_LAT2)!!.toDouble()
+            lat3 = it.getString(FARM_LAT3)!!.toDouble()
+            lat4 = it.getString(FARM_LAT4)!!.toDouble()
+            long1 = it.getString(FARM_LON1)!!.toDouble()
+            long2= it.getString(FARM_LON2)!!.toDouble()
+            long3 = it.getString(FARM_LON3)!!.toDouble()
+            long4 = it.getString(FARM_LON4)!!.toDouble()
 
 
         }
+
     }
 
     override fun onMapReady(p0: GoogleMap) {
@@ -86,7 +89,7 @@ class MapViewFragment : Fragment(), OnMapReadyCallback {
 
         polygon1.tag = "alpha"
         polygon1.fillColor = Color.RED
-        p0.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(-29.501, 119.700), 8f))
+        p0.moveCamera(CameraUpdateFactory.newLatLngZoom(LatLng(lat1, long1), 30f))
 
 
 
